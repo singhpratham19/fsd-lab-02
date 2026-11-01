@@ -17,7 +17,9 @@
 
   <main class="form-panel">
     <h1>Create your account</h1>
+    <p>Already registered? <a href="login.html">Log in</a></p>
     <p id="welcome-message" role="status"></p>
+    <button type="button" class="action" id="logout-button" hidden>Log out</button>
 
     <form id="registration-form" novalidate>
       <div class="input-group">
@@ -53,10 +55,12 @@
       </div>
 
       <button type="submit" class="action primary">Register</button>
+      <p class="error" id="server-error"></p>
       <p id="success-message" role="status"></p>
     </form>
   </main>
 
+  <script src="session.js"></script>
   <script src="validation.js"></script>
 </body>
 </html>

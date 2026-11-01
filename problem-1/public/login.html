@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&family=Alegreya:wght@700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="split-layout">
+  <aside class="photo-panel">
+    <p class="panel-quote">Student Login</p>
+    <p class="panel-owner">Pratham Singh, PRN 1032211384</p>
+  </aside>
+
+  <main class="form-panel">
+    <h1>Log in</h1>
+    <p>New student? <a href="index.html">Register</a></p>
+    <p id="welcome-message" role="status"></p>
+    <button type="button" class="action" id="logout-button" hidden>Log out</button>
+
+    <form id="login-form" novalidate>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" autocomplete="username">
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" autocomplete="current-password">
+      </div>
+
+      <button type="submit" class="action primary">Log in</button>
+      <p class="error" id="login-error"></p>
+    </form>
+  </main>
+
+  <script src="session.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

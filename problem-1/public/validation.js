@@ -44,29 +44,11 @@ function getErrors() {
   return errors;
 }
 
-// Cookie and session storage: remember the username, never the password
-function getCookie(name) {
-  const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
-  return match ? decodeURIComponent(match[1]) : "";
-}
-
-function rememberStudent(username) {
-  document.cookie = `student=${encodeURIComponent(username)}; max-age=86400; path=/; SameSite=Lax`;
-  sessionStorage.setItem("loggedIn", "true");
-}
-
-function showWelcome() {
-  const student = getCookie("student");
-  const status = sessionStorage.getItem("loggedIn") ? "logged in this session" : "saved in a cookie";
-  document.getElementById("welcome-message").textContent = student
-    ? `Welcome back, ${student} (${status}).`
-    : "";
-}
-
 const form = document.getElementById("registration-form");
 const success = document.getElementById("success-message");
+const serverError = document.getElementById("server-error");
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const errors = getErrors();
@@ -77,17 +59,33 @@ form.addEventListener("submit", (event) => {
     document.getElementById(id).classList.toggle("invalid", Boolean(errors[id]));
   });
 
+  success.textContent = "";
+  serverError.textContent = "";
+
   if (Object.keys(errors).length > 0) {
-    success.textContent = "";
     document.getElementById(fields.find((id) => errors[id])).focus();
     return;
   }
 
-  const username = getValue("username").trim();
-  rememberStudent(username);
-  showWelcome();
-  success.textContent = `${username} is registered.`;
-  form.reset();
-});
+  // Send the valid data to the server, which saves it in MySQL
+  const response = await fetch("/api/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username: getValue("username").trim(),
+      email: getValue("email").trim(),
+      phone: getValue("phone").trim(),
+      password: getValue("password"),
+    }),
+  });
+  const data = await response.json();
 
-showWelcome();
+  if (!response.ok) {
+    serverError.textContent = data.error;
+    return;
+  }
+
+  success.textContent = `${data.username} is registered.`;
+  form.reset();
+  showSession();
+});
