@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOM and jQuery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&family=Alegreya:wght@700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="page-header">
+    <div class="shell">
+      <h1>Dynamic Web Page using JavaScript, DOM and jQuery</h1>
+      <p class="panel-owner">Pratham Singh, PRN 1032211384</p>
+    </div>
+  </header>
+
+  <main class="shell task-list">
+    <h2>JavaScript and DOM</h2>
+
+    <section class="task">
+      <h3>getElementById, getElementsByTagName, getElementsByClassName</h3>
+      <ul id="item-list">
+        <li class="item">HTML</li>
+        <li class="item">CSS</li>
+        <li class="item">JavaScript</li>
+      </ul>
+      <p id="access-result"></p>
+      <div class="action-row">
+        <button type="button" class="action" id="by-id">getElementById</button>
+        <button type="button" class="action" id="by-tag">getElementsByTagName</button>
+        <button type="button" class="action" id="by-class">getElementsByClassName</button>
+      </div>
+    </section>
+
+    <section class="task">
+      <h3>Change the text using innerHTML property</h3>
+      <p id="change-text">This is the original text.</p>
+      <button type="button" class="action" id="text-button">Change text</button>
+    </section>
+
+    <section class="task">
+      <h3>Change the CSS properties like color, position</h3>
+      <p id="style-box">Style this element</p>
+      <div class="action-row">
+        <button type="button" class="action" id="color-button">Change color</button>
+        <button type="button" class="action" id="position-button">Change position</button>
+      </div>
+    </section>
+
+    <section class="task">
+      <h3>Change the image source after clicking on a button</h3>
+      <img id="photo" src="images/reading-room.jpg" alt="Wooden bookcases under stained glass windows">
+      <div class="action-row">
+        <button type="button" class="action" id="image-button">Change image</button>
+      </div>
+    </section>
+
+    <section class="task">
+      <h3>Add a text node and attach it to a parent node</h3>
+      <div id="parent-node">Parent node:</div>
+      <div class="action-row">
+        <button type="button" class="action" id="add-node">Add text node</button>
+      </div>
+    </section>
+
+    <section class="task">
+      <h3>Delete a node</h3>
+      <ul id="delete-list">
+        <li>Node 1</li>
+        <li>Node 2</li>
+        <li>Node 3</li>
+      </ul>
+      <button type="button" class="action" id="delete-node">Delete last node</button>
+    </section>
+
+    <h2>jQuery</h2>
+
+    <section class="task">
+      <h3>Change button text using jQuery</h3>
+      <button type="button" class="action" id="jq-button">Click to change my text</button>
+    </section>
+
+    <section class="task">
+      <h3>Set background-image using jQuery CSS property</h3>
+      <div id="background-box"></div>
+      <div class="action-row">
+        <button type="button" class="action" id="jq-background">Set background image</button>
+      </div>
+    </section>
+
+    <section class="task">
+      <h3>Access HTML form data using jQuery</h3>
+      <form id="jq-form">
+        <div class="input-group">
+          <label for="jq-name">Name</label>
+          <input type="text" id="jq-name">
+        </div>
+        <div class="input-group">
+          <label for="jq-course">Course</label>
+          <select id="jq-course">
+            <option>Computer Engineering</option>
+            <option>Information Technology</option>
+            <option>Cyber Security and Forensics</option>
+          </select>
+        </div>
+        <button type="submit" class="action primary">Show form data</button>
+      </form>
+      <p id="jq-result"></p>
+    </section>
+
+    <section class="task">
+      <h3>Add attribute using jQuery</h3>
+      <input type="text" id="jq-attribute">
+      <p id="attribute-result"></p>
+      <button type="button" class="action" id="jq-add-attribute">Add placeholder attribute</button>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

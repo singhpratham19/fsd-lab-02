@@ -1,4 +1,4 @@
-/* External CSS for the Reading Room library project */
+/* External CSS for Problem 1 */
 
 * {
   box-sizing: border-box;
@@ -85,12 +85,12 @@ img {
 
 /* Registration page: photo panel beside the form */
 .photo-panel {
-  background: linear-gradient(rgba(29, 26, 75, 0.45), rgba(29, 26, 75, 0.85)), url("images/reading-room.jpg") center / cover;
+  background-color: #1d1a4b;
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 240px;
+  justify-content: center;
+  
   padding: 1.5rem;
 }
 
@@ -191,7 +191,7 @@ input.invalid {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 1.5rem;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 2.5rem;
 }
 
