@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap nav-row">
+      <a class="brand" href="index.html">Slow Climbs Club</a>
+      <div class="nav-links">
+        <a href="index.html" aria-current="page">Register</a>
+        <a href="dom.html">Club page</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap form-page">
+    <h1>Student registration</h1>
+    <p class="lead">Create your account to join the campus trekking club.</p>
+    <p id="welcome-message" role="status"></p>
+
+    <form id="registration-form" novalidate>
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" id="username" autocomplete="username">
+        <p class="error" id="username-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="text" id="email" autocomplete="email">
+        <p class="hint">Use the format name@abc.com, with exactly 3 letters after the @.</p>
+        <p class="error" id="email-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input type="text" id="phone" inputmode="numeric" autocomplete="tel">
+        <p class="error" id="phone-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" autocomplete="new-password">
+        <p class="hint">At least 7 characters, with a capital letter, a digit and one of &amp; , $ # @</p>
+        <p class="error" id="password-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="confirm-password">Confirm password</label>
+        <input type="password" id="confirm-password" autocomplete="new-password">
+        <p class="error" id="confirm-password-error"></p>
+      </div>
+
+      <button type="submit" class="button">Register</button>
+      <p id="success-message" role="status"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Pratham Singh, PRN 1032211384</div>
+  </footer>
+
+  <script src="validation.js"></script>
+</body>
+</html>

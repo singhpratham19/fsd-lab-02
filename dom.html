@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slow Climbs Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap nav-row">
+      <a class="brand" href="index.html">Slow Climbs Club</a>
+      <div class="nav-links">
+        <a href="index.html">Register</a>
+        <a href="dom.html" aria-current="page">Club page</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="banner">
+    <div class="wrap">
+      <h1 id="club-title">Next trek: Sinhagad</h1>
+      <p id="trip-tag">Saturday, 5 am start</p>
+      <div class="button-row">
+        <button type="button" class="button" id="change-title">Announce next trek</button>
+        <button type="button" class="button" id="move-tag">Move the tag</button>
+        <button type="button" class="button" id="set-background">Show photo background</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap club-page">
+    <section class="club-grid">
+      <div>
+        <h2>Notice board</h2>
+        <ul id="notice-list">
+          <li><span class="notice-date">3 August 2024</span> Bring a raincoat and shoes with grip.</li>
+          <li><span class="notice-date">10 August 2024</span> Bus leaves from the main gate.</li>
+          <li><span class="notice-date">17 August 2024</span> Trip photos go up on the club wall.</li>
+        </ul>
+        <p id="notice-count"></p>
+
+        <label for="new-notice">New notice</label>
+        <input type="text" id="new-notice">
+        <p class="error" id="notice-error"></p>
+
+        <div class="button-row">
+          <button type="button" class="button" id="add-notice">Add notice</button>
+          <button type="button" class="button" id="delete-notice">Delete last notice</button>
+          <button type="button" class="button" id="count-notices">Count notices</button>
+          <button type="button" class="button" id="highlight-dates">Highlight dates</button>
+        </div>
+      </div>
+
+      <div>
+        <h2>From the last trip</h2>
+        <img id="trip-photo" src="images/sinhagad-ridge.jpg" alt="A lone hiker on a green ridge at Sinhagad under low grey clouds">
+        <div class="button-row">
+          <button type="button" class="button" id="change-photo">Change photo</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="join-section">
+      <h2>Join the next trek</h2>
+      <form id="join-form">
+        <div class="field">
+          <label for="join-name">Name</label>
+          <input type="text" id="join-name" name="name">
+        </div>
+        <div class="field">
+          <label for="join-trek">Trek</label>
+          <select id="join-trek" name="trek">
+            <option>Sinhagad</option>
+            <option>Rajgad</option>
+            <option>Torna</option>
+          </select>
+        </div>
+        <div class="button-row">
+          <button type="submit" class="button" id="join-button">Reserve my seat</button>
+          <button type="button" class="button" id="add-attribute">Add a name hint</button>
+        </div>
+      </form>
+      <p id="join-summary" role="status"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Pratham Singh, PRN 1032211384. Photos by Suraj Digrase, Wikimedia Commons (CC0).</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="dom.js"></script>
+</body>
+</html>
