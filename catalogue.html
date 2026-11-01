@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogue | Reading Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&family=Alegreya:wght@700;800&display=swap">
+  <link rel="stylesheet" href="library.css">
+</head>
+<body>
+  <header id="catalogue-header">
+    <div class="shell">
+      <div class="top-row">
+        <a class="logo" href="index.html">Reading Room</a>
+        <div class="tabs">
+          <a href="index.html">Register</a>
+          <a href="catalogue.html" aria-current="page">Catalogue</a>
+        </div>
+      </div>
+      <h1 id="book-of-week">Book of the week: Wings of Fire</h1>
+      <p id="due-tag">Loan period: 14 days</p>
+      <div class="action-row">
+        <button type="button" class="action" id="change-book">Show next week's book</button>
+        <button type="button" class="action" id="move-due-tag">Move the loan tag</button>
+        <button type="button" class="action" id="change-background">Change header background</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell catalogue-layout">
+    <section>
+      <h2>New on the shelf</h2>
+      <ol id="book-list">
+        <li>Wings of Fire <span class="book-author">A. P. J. Abdul Kalam</span></li>
+        <li>Clean Code <span class="book-author">Robert C. Martin</span></li>
+        <li>The Pragmatic Programmer <span class="book-author">Andrew Hunt and David Thomas</span></li>
+      </ol>
+      <p id="book-total"></p>
+
+      <label for="book-title">Suggest a book</label>
+      <input type="text" id="book-title">
+      <p class="error" id="book-error"></p>
+
+      <div class="action-row">
+        <button type="button" class="action primary" id="add-book">Add book</button>
+        <button type="button" class="action" id="remove-book">Remove last book</button>
+        <button type="button" class="action" id="count-books">Count books</button>
+        <button type="button" class="action" id="mark-authors">Highlight authors</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Inside the library</h2>
+      <img id="room-photo" src="images/reading-room.jpg" alt="Dark wooden bookcases under stained glass windows in a reading room">
+      <div class="action-row">
+        <button type="button" class="action" id="swap-photo">Change photo</button>
+      </div>
+    </section>
+
+    <section id="reserve-panel">
+      <h2>Reserve a book</h2>
+      <form id="reserve-form">
+        <div class="input-group">
+          <label for="reader-name">Your name</label>
+          <input type="text" id="reader-name" name="reader">
+        </div>
+        <div class="input-group">
+          <label for="reserve-book">Book</label>
+          <select id="reserve-book" name="book">
+            <option>Wings of Fire</option>
+            <option>Clean Code</option>
+            <option>The Pragmatic Programmer</option>
+          </select>
+        </div>
+        <div class="action-row">
+          <button type="submit" class="action primary" id="reserve-button">Reserve book</button>
+          <button type="button" class="action" id="name-hint">Add a name hint</button>
+        </div>
+      </form>
+      <p id="reserve-result" role="status"></p>
+    </section>
+  </main>
+
+  <footer class="library-footer">
+    <div class="shell">Pratham Singh, PRN 1032211384. Catalogue updated August 2024. Photos by Michael D Beckwith and Carol M. Highsmith, Wikimedia Commons (public domain).</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="catalogue.js"></script>
+</body>
+</html>

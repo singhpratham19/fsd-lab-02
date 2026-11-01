@@ -1,0 +1,298 @@
+/* External CSS for the Reading Room library project */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f3fb;
+  color: #1d1a4b;
+  font-family: "Alegreya Sans", Arial, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: Alegreya, Georgia, serif;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 6vw, 3.4rem);
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 0 0 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+input,
+select {
+  background-color: #ffffff;
+  border: 1px solid #8f8cb8;
+  border-radius: 10px;
+  color: inherit;
+  font: inherit;
+  padding: 0.55rem 0.75rem;
+  width: 100%;
+}
+
+input:focus,
+select:focus {
+  border-color: #3a3596;
+  outline: 3px solid #e5b94e;
+}
+
+img {
+  border-radius: 14px;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.logo {
+  color: #e5b94e;
+  font-family: Alegreya, Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.tabs {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.tabs a {
+  color: inherit;
+  font-weight: 500;
+}
+
+.tabs a[aria-current="page"] {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Registration page: photo panel beside the form */
+.photo-panel {
+  background: linear-gradient(rgba(29, 26, 75, 0.45), rgba(29, 26, 75, 0.85)), url("images/reading-room.jpg") center / cover;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 240px;
+  padding: 1.5rem;
+}
+
+.panel-quote {
+  font-family: Alegreya, Georgia, serif;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.panel-owner {
+  margin: 0;
+}
+
+.form-panel {
+  margin: 0 auto;
+  max-width: 560px;
+  padding: 1.5rem 1rem 3rem;
+  width: 100%;
+}
+
+.form-panel h1 {
+  margin-top: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.hint {
+  color: #55527f;
+  font-size: 1rem;
+  margin: 0.25rem 0 0;
+}
+
+.error {
+  color: #a3341f;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.25rem 0 0;
+}
+
+.error:empty {
+  display: none;
+}
+
+input.invalid {
+  border: 2px solid #a3341f;
+}
+
+.action {
+  background-color: transparent;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.4rem 1.1rem;
+}
+
+.action:hover,
+.action:focus-visible {
+  background-color: #e5b94e;
+  border-color: #e5b94e;
+  color: #1d1a4b;
+}
+
+.action.primary {
+  background-color: #3a3596;
+  border-color: #3a3596;
+  color: #ffffff;
+}
+
+.action.primary:hover,
+.action.primary:focus-visible {
+  background-color: #1d1a4b;
+  border-color: #1d1a4b;
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+/* Catalogue page */
+.shell {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 0 1rem;
+}
+
+.top-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.catalogue-layout {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1fr;
+  padding-bottom: 3rem;
+  padding-top: 2.5rem;
+}
+
+.book-author {
+  color: #55527f;
+  display: block;
+  font-size: 1rem;
+}
+
+.library-footer {
+  background-color: #1d1a4b;
+  color: #d9d7f0;
+  font-size: 1rem;
+  padding: 1.25rem 0;
+}
+
+#catalogue-header {
+  background-color: #1d1a4b;
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  padding: 1.25rem 0 2.5rem;
+}
+
+#catalogue-header h1 {
+  color: #ffffff;
+}
+
+#due-tag {
+  border: 1px solid #e5b94e;
+  border-radius: 999px;
+  display: inline-block;
+  margin: 0;
+  padding: 0.1rem 0.8rem;
+}
+
+#book-list {
+  padding-left: 1.4rem;
+}
+
+#book-list li {
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  padding: 0.5rem 0.75rem;
+}
+
+#reserve-panel {
+  background-color: #e6e4f6;
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+#welcome-message:empty,
+#success-message:empty,
+#reserve-result:empty,
+#book-total:empty {
+  display: none;
+}
+
+#welcome-message,
+#success-message,
+#reserve-result {
+  background-color: #fbf1d5;
+  border-radius: 10px;
+  margin: 1rem 0;
+  padding: 0.6rem 0.9rem;
+}
+
+@media (min-width: 900px) {
+  .split-layout {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    min-height: 100vh;
+  }
+
+  .photo-panel {
+    padding: 2.5rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+
+  .form-panel {
+    padding: 2.5rem 1rem 3rem;
+  }
+
+  .catalogue-layout {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  #reserve-panel {
+    grid-column: 1 / -1;
+  }
+}
